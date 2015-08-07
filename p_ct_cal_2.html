@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>form validation</title>
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" media="screen" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <style type="text/css" media="screen">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .mrg {
+            padding-left: 0;
+        }
+        
+        .frm_validate {
+            margin-top: 100px;
+        }
+        
+        .pos {
+            margin-left: 300px;
+        }
+        
+        .pos > li {
+            margin-left: 40px;
+        }
+        
+        .nav-bg {
+            background: brown;
+        }
+        .star{
+        	color: red;
+        	font-size: 15px;
+        }
+        #text{
+        	color: red;
+        }
+        .cal{
+            margin-top: 120px;
+            margin-left: 380px;
+        }
+        #a , #b{
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row mrg">
+        <div class="container-fluid">
+            <div class="col-md-12">
+                <nav class="navbar navbar-inverse nav-bg">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                            <ul class="nav navbar-nav pos">
+                                <li class=""><a href="#">Calcultor1 <span class="sr-only">(current)</span></a></li>
+                                <li><a href="p_ct_cal_2.html">Calculator2</a></li>
+                               
+                                <li><a href="formValidation.html">Form Validation</a></li>
+                                <li><a href="#">Project</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- calculator -->
+
+           <div class="container">
+               <div class="row">
+                   <div class="cal">
+
+                        <div class="btn-toolbar">
+                            <div class="btn-group">
+                                <a href="#" class="btn btn-primary" onclick="addition()">Addition</a>
+                                <a href="#" class="btn btn-danger" onclick="subtraction()">Subtraction</a>
+                                <a href="#" class="btn btn-warning" onclick="multiplication()">Multiplication</a>
+                                <a href="#" class="btn btn-success" onclick="division()">Division</a>
+                                <a href="#" class="btn btn-info" onclick="c()">Clear</a>
+                            </div>
+                        </div><br>
+
+                        <input type="text" name="" value="" placeholder="" id="a">
+                        <input type="text" name="" value="" placeholder="" id="b">
+
+                        <div>
+                            <h1>Result : <span id="output"></span></h1>
+                        </div>
+
+                   </div>
+               </div>
+           </div>
+
+
+
+        </div>
+    </div>
+	
+	<!-- javascript code -->
+
+	<script type="text/javascript">
+
+	   var a, b, result;
+
+        function setValues(){
+            a = Number(document.getElementById("a").value);
+            b = Number(document.getElementById("b").value);
+        }
+
+        function addition(){
+            setValues();
+            result = a + b;
+            document.getElementById("output").innerHTML = result;
+        }
+
+        function subtraction(){
+            setValues();
+            result = a - b;
+            document.getElementById("output").innerHTML = result;
+        }
+
+        function multiplication(){
+            setValues();
+            result = a * b;
+            document.getElementById("output").innerHTML = result;
+        }
+
+        function division(){
+            setValues();
+            result = a/b;
+            document.getElementById("output").innerHTML = result;
+            
+        }
+
+        function c(){
+            setValues();
+            result = a , b;
+            result = "";
+            document.getElementById("output").innerHTML = result;
+
+        }
+
+
+	</script>
+
+
+
+</body>
+
+</html>
